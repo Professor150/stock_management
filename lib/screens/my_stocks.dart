@@ -15,7 +15,7 @@ class MyStocks extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Container(
+            SizedBox(
               height: 300,
               child: Stack(
                 children: [
@@ -85,31 +85,15 @@ class MyStocks extends StatelessWidget {
               ),
             ),
             Container(
-              height: MediaQuery.of(context).size.height,
-              child: Stack(
+              margin: const EdgeInsets.only(left: 20, right: 20, bottom: 20),
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(20),
+                color: Colors.white,
+              ),
+              child: Column(
                 children: [
-                  Positioned(
-                    right: 15,
-                    top: 20,
-                    bottom: 20,
-                    left: 20,
-                    child: Container(
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(20),
-                        color: Colors.white,
-                      ),
-                      child: Expanded(
-                        child: Column(
-                          children: [
-                            SizedBox(
-                              height: 10,
-                            ),
-                            MyStockList(),
-                          ],
-                        ),
-                      ),
-                    ),
-                  ),
+                  const SizedBox(height: 10),
+                  MyStockList(),
                 ],
               ),
             ),

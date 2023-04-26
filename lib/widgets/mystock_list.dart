@@ -21,19 +21,19 @@ class MyStockList extends StatelessWidget {
             ),
           ),
         ),
-        Container(
-          height: MediaQuery.of(context).size.height * 0.6,
-          child: ListView.separated(
-            separatorBuilder: (context, index) {
-              return Divider(
-                thickness: 1.5,
-                color: Colors.black38,
-              );
-            },
-            itemCount: 10,
-            itemBuilder: (context, index) {
-              var stocks = 170;
-              return ListTile(
+        Column(
+          children: List.generate(10, (index) {
+            var stocks = 170;
+            return Container(
+              decoration: BoxDecoration(
+                border: Border(
+                  bottom: BorderSide(
+                    color: Colors.grey,
+                    width: 1,
+                  ),
+                ),
+              ),
+              child: ListTile(
                 title: Text(
                   'Stock Name ${index + 1}',
                   style: TextStyle(
@@ -49,9 +49,9 @@ class MyStockList extends StatelessWidget {
                     fontWeight: FontWeight.w600,
                   ),
                 ),
-              );
-            },
-          ),
+              ),
+            );
+          }),
         ),
       ],
     );
