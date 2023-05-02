@@ -55,16 +55,16 @@ class _SplashScreenState extends State<SplashScreen> {
             ),
             Center(
               child: Container(
-                child: Image.network(
-                  'https://png.pngtree.com/png-vector/20200629/ourmid/pngtree-ai-hand-drawn-financial-stock-market-trend-analysis-chart-png-image_2268684.jpg',
+                child: Image.asset(
+                  'assets/images/stock.png',
+                  height: 250,
                   fit: BoxFit.cover,
                 ),
               ),
             ),
             SizedBox(
-              height: MediaQuery.of(context).size.height * 0.25,
+              height: MediaQuery.of(context).size.height * 0.23,
             ),
-            CircularProgressIndicator(),
             Column(
               mainAxisAlignment: MainAxisAlignment.end,
               children: [

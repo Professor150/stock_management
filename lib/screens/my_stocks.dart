@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:dotted_line/dotted_line.dart';
+import 'package:stock_management/screens/homepage1.dart';
 import 'package:stock_management/screens/stock_card.dart';
 import 'package:stock_management/widgets/mystock_list.dart';
 
@@ -99,6 +100,16 @@ class MyStocks extends StatelessWidget {
             ),
           ],
         ),
+      ),
+      floatingActionButton: FloatingActionButton(
+        backgroundColor: Colors.lightBlue.shade900,
+        child: Icon(
+          Icons.add,
+          color: Colors.white,
+        ),
+        onPressed: () {
+          Navigator.pushNamed(context, Homepage1.routeName);
+        },
       ),
     );
   }
